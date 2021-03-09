@@ -144,9 +144,7 @@ function test() {
        }
        return arr;
    }
-   
-   
-   
+    
    
    
    /*
@@ -161,7 +159,13 @@ function test() {
    If you pass it ["quick", "brown", "fox"] then it should return { "quick": 0, "brown": 1, "fox": 2 }
    */
    
-   
+   const flipArray = (array) => {
+       obj ={};
+       array.forEach((value, index) => {
+        obj[value] = index;
+       });
+       return obj;
+   }
    
    
    
