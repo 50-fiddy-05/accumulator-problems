@@ -44,14 +44,15 @@ function test() {
    Example: if you pass it "abc" then it should return "aabbcc"
    */
    
-   const doubleLetters = (str) => 
-   function doubleLetters(str){
-       let doubleStr = "";
-       for(let i = 0; i < str.length; i++){
-           doubleStr += str[i].concat(str[i]);
-       }
-       return doubleStr;
-   }
+   const doubleLetters = (str) => str.split("").reduce((acc,current) => acc + current + current, "");
+
+//    function doubleLetters(str){
+//        let doubleStr = "";
+//        for(let i = 0; i < str.length; i++){
+//            doubleStr += str[i].concat(str[i]);
+//        }
+//        return doubleStr;
+//    }
    
    
    
@@ -137,12 +138,8 @@ function test() {
    
    
    function createRange(number, str){
-       let arr = [];
-       while(number > 0){
-           arr.push(str);
-           number--;
-       }
-       return arr;
+       let arr = new Array(number);
+       return arr.fill(str);
    }
     
    
